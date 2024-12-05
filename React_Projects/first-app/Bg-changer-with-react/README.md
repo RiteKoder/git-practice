@@ -1,4 +1,8 @@
-# React + Vite
+# Good ol' background changer but with react and tailwind css
+
+Hover pn any colour button to change the background colour of the page
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
