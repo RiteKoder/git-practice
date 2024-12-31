@@ -1,0 +1,21 @@
+{
+  "name": "Hello World",
+  "description": "this is a test extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": ["tabs", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Q",
+        "mac": "Command+Q"
+      }
+    }
+  }
+}

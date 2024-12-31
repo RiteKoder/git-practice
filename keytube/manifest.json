@@ -1,0 +1,19 @@
+{
+  "name": "Hello World",
+  "description": "this is a test extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": ["tabs", "activeTab", "scripting", "commands"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "redirect-to-url": {
+      "suggested_key": "Alt+W",
+      "description": "Redirect to a specific URL"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "My Chrome Extension",
+  "version": "1.0",
+  "description": "A basic Chrome extension boilerplate.",
+  "permissions": ["storage", "activeTab", "scripting", "commands"],
+  "host_permissions": ["https://*.youtube.com/*"],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
