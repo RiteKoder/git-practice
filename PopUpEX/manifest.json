@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Centered Popup Example",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["tabs", "activeTab", "scripting", "commands", "runtime"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "redirect-to-search": {
+      "suggested_key": "Alt+X",
+      "description": "Redirect to a specific URL"
+    }
+  }
+}
