@@ -41,4 +41,9 @@ function typeInInput(input, text) {
   // Trigger an input event to ensure the UI and associated scripts recognize the change
   let inputEvent = new Event("input", { bubbles: true });
   input.dispatchEvent(inputEvent);
+  document
+    .querySelector(
+      "#search-button > ytd-button-renderer > yt-button-shape > button > yt-touch-feedback-shape > div > div.yt-spec-touch-feedback-shape__fill"
+    )
+    .click();
 }

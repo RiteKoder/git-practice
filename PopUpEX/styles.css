@@ -1,39 +1,75 @@
-/* Style the body to remove margins */
+/* General body styling for center alignment */
 body {
-  height: max-content;
-  width: max-content;
-  margin: 0;
-  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #89f7fe,
+    #66a6ff
+  ); /* Gradient background */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f4f4f4;
-  font-family: Arial, sans-serif;
+  margin: 0;
 }
 
-/* Style the popup content */
-#popup-content {
-  width: 300px;
-  padding: 20px;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
+/* Container for the input and button */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 30px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Style the close button */
-#close-button {
-  margin-top: 10px;
-  padding: 8px 12px;
-  background-color: #007bff;
-  color: white;
+/* Input field styling */
+#ti {
+  font-size: 16px;
+  padding: 12px 20px;
+  width: 250px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.3s ease;
+  color: #333;
+  background: #f9f9f9;
+}
+
+/* Input field focus effect */
+#ti:focus {
+  border-color: #66a6ff;
+  background: #e6f7ff;
+  box-shadow: 0 0 8px rgba(102, 166, 255, 0.5);
+}
+
+/* Button styling */
+#btn {
+  font-size: 16px;
+  padding: 12px 25px;
+  color: #fff;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
   border: none;
-  border-radius: 4px;
+  border-radius: 25px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 10px rgba(255, 117, 140, 0.4);
 }
 
-#close-button:hover {
-  background-color: #0056b3;
+/* Button hover effect */
+#btn:hover {
+  background: linear-gradient(135deg, #ff758c, #ff3d68);
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(255, 61, 104, 0.6);
+}
+
+/* Button active effect */
+#btn:active {
+  background: linear-gradient(135deg, #ff3d68, #ff1e50);
+  transform: scale(1);
+  box-shadow: 0 5px 8px rgba(255, 30, 80, 0.4);
 }
