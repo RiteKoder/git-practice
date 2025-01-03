@@ -1,16 +1,22 @@
 let text = document.getElementById("ti");
-
 let btn = document.getElementById("btn");
-val = text.value;
+
 btn.addEventListener("click", () => {
-  val = text.value;
-  console.log(val);
-  chrome.runtime.sendMessage(
-    { action: "sendValue", value: val },
-    (response) => {
-      if (response.success) {
-        console.log("Value sent successfully!");
-      }
+  const val = text.value; // Get the input value
+  console.log("Value from popup:", val);
+
+  // Get the active tab and send a message to its content script
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    if (tabs[0]?.id) {
+      chrome.tabs.sendMessage(
+        tabs[0].id,
+        { action: "sendValue", value: val },
+        (response) => {
+          if (response) {
+            console.log("Response from content.js:", response);
+          }
+        }
+      );
     }
-  );
+  });
 });

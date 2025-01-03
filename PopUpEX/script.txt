@@ -1,17 +1,4 @@
-// Listen for messages from the popup
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message.action === "sendValue") {
-    console.log("Value received in content.js:", message.value);
-
-    const inputElement = document.querySelector("#input-1 > input");
-    if (inputElement) {
-      typeInInput(inputElement, message.value); // Use the value received in the message
-      sendResponse({ success: true, message: "Typing simulation complete." });
-    } else {
-      sendResponse({ success: false, message: "Input element not found." });
-    }
-  }
-});
+const inputElement = document.querySelector("#input-1 > input");
 
 // Function to simulate typing in the input field
 function typeInInput(input, text) {
@@ -42,3 +29,6 @@ function typeInInput(input, text) {
   let inputEvent = new Event("input", { bubbles: true });
   input.dispatchEvent(inputEvent);
 }
+
+// Example usage: Simulate typing "hello" in the input field
+typeInInput(inputElement, "hell");

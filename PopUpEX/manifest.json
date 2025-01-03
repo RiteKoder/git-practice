@@ -14,5 +14,11 @@
       "suggested_key": "Alt+X",
       "description": "Redirect to a specific URL"
     }
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["content.js"]
+    }
+  ]
 }
